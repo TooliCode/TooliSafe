@@ -1,43 +1,58 @@
-# TooliSafe – C# / .NET 9 Security Core
+# TooliSafe AES-256 Crypto Utility
 
-🛡️ **Your keys, your rules.** 
+This repository/module contains a clean, isolated AES-256 encryption and decryption utility designed for the TooliSafe application. 
 
-This repository contains the standalone C# / .NET 9 cryptography classes (AES-256 & Diffie-Hellman Key Exchange) inspired by the **TooliSafe** Android app.
+It provides straightforward methods to secure both strings and files using standard cryptography libraries in .NET (`System.Security.Cryptography`).
 
----
+## Features
 
-## 📱 Get the App
+- **String Encryption & Decryption:** Uses a fixed 8-byte salt and 1000 iterations for PBKDF2 (SHA-256) key derivation. This maintains backward compatibility with older TooliSafe string formats.
+- **Asynchronous File Encryption & Decryption:** Uses a secure, dynamically generated 16-byte salt and 10,000 iterations for PBKDF2 (SHA-256). The salt is prepended to the resulting encrypted file.
+- **Isolated Logic:** Fully decoupled from UI elements, app-specific states, and error dialogs for easy testing and portability.
 
-* **Google PlayStore:** [Download TooliSafe on Google Play](https://play.google.com/store/apps/details?id=com.toolisafe.app)
-* **Other Platforms:** Available on alternative app stores and direct distribution channels.
+## Usage Examples
 
----
+### Encrypting and Decrypting a String
 
-## 🗝️ Key Features & Cryptography
+```csharp
+using TooliSafe.Crypto;
 
-* **AES-256 Encryption:** Industry-standard protection for top-tier security.
-* **Diffie-Hellman Key Exchange:** Secure, decentralized key exchange with backward compatibility.
-* **Zero Metadata Architecture:** No servers, no tracking, no cloud storage—keys stay local.
-* **Channel Hopping Concept:** Designed for sending encrypted payloads across multiple transmission paths (WhatsApp, Telegram, Signal, etc.).
+string myPassword = "SuperSecretPassword123!";
+string textToSecure = "This is a confidential message.";
 
----
+// Encrypt
+byte[] encryptedData = AES256.EncryptStringToBytes(textToSecure, myPassword);
 
-## 🛡️ About the TooliSafe App
+// Decrypt
+string decryptedText = AES256.DecryptStringFromBytes(encryptedData, myPassword);
+```
 
-TooliSafe gives you total sovereignty over your data, operating completely independent of transmission infrastructure. Attacks on messenger servers or spying on metadata are technically impossible—because we don't hold your keys, you do.
+### Encrypting and Decrypting a File
 
-### App Highlights:
-* **Local Privacy:** Files and messages stay strictly on your device.
-* **Biometric & Brute-Force Protection:** Fingerprint login, customizable PINs, enforced delay timeouts, and SOS PIN features.
-* **Telegram Integration:** Background processing and automated key exchange.
-* **Multi-Format Support:** Encrypt text, files, and voice messages seamlessly.
+```csharp
+using System.Threading.Tasks;
+using TooliSafe.Crypto;
 
----
+public async Task ProcessFiles()
+{
+    string password = "StrongFilePassword456!";
+    string inputFile = "cleartext_document.pdf";
+    string encryptedFile = "document.tsafe";
+    string decryptedFile = "restored_document.pdf";
 
-## 📄 License
+    // Encrypt File
+    await AES256.EncryptFileAsync(inputFile, encryptedFile, password);
 
-The code in this repository is published under the **GNU General Public License v3.0 (GPLv3)**.
+    // Decrypt File
+    bool success = await AES256.DecryptFileAsync(encryptedFile, decryptedFile, password);
+    
+    if (success)
+    {
+        // Decryption successful
+    }
+}
+```
 
----
-
-*TooliSafe is an independent security tool and is not officially affiliated with Telegram or other messenger platforms.*
+## Security & Compatibility Notes
+- **String Encryption:** The fixed salt (`0x1` to `0x8`) and `1000` iterations are preserved specifically to guarantee backward compatibility with legacy TooliSafe backups.
+- **File Encryption:** A new random salt is generated every time a file is encrypted, making it highly secure against precomputed dictionary attacks. The iteration count is set to `10000` to increase resistance against brute-force attacks while maintaining acceptable performance.
