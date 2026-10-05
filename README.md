@@ -41,3 +41,5 @@ The code in this repository is published under the **GNU General Public License 
 ---
 
 *TooliSafe is an independent security tool and is not officially affiliated with Telegram or other messenger platforms.*
+
+[📖 View Full Setup & Usage Guide](./INSTALLATION.md)
