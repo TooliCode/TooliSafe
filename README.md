@@ -8,7 +8,8 @@ This repository contains the standalone C# / .NET 9 cryptography classes (AES-25
 
 ## 📱 Get the App
 
-* **Google PlayStore:** [Download TooliSafe on Google Play](https://play.google.com/store/apps/details?id=DEINE_PACKAGE_ID_HIER)
+* **Google PlayStore:** [Download TooliSafe on Google Play](https://play.google.com/store/apps/details?id=com.toolisafe.app)
+* - 🛒 **Microsoft Store:** [TooliSafe (Demo) for Free](https://apps.microsoft.com/detail/9n5zgjzxd8bx)
 * * 🛒 **Payhip:** [TooliSafe (Premium) for 9,90 €]([Download TooliSafe on PAYHIP_PRODUKT_LINK](https://payhip.com/b/EHJdu))
 * * 🛒 **Payhip:** [TooliSafe (Demo)  free]([Download TooliSafe on PAYHIP_PRODUKT_LINK](https://payhip.com/b/6VJWN))
 * **Other Platforms:** Available on alternative app stores and direct distribution channels.
