@@ -72,3 +72,15 @@ The code in this repository is published under the **GNU General Public License 
 
 ### 8. Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app
 <img src="./images/8. Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app.png" alt="Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app" width="300"/>
+
+### 9. Your friend receives the file, imports it, and TooliSafe automatically creates the contact
+<img src="./images/9. Your friend receives the file, imports it, and TooliSafe automatically creates the contact.png" alt="Your friend receives the file, imports it, and TooliSafe automatically creates the contact" width="300"/>
+
+### 10. Secure connection established! You can now exchange encrypted messages and files directly
+<img src="./images/10. Secure connection established! You can now exchange encrypted messages and files directly.png" alt="Secure connection established! You can now exchange encrypted messages and files directly" width="300"/>
+
+### 11. Use Direct Send via Telegram Setup and ChatIDs
+<img src="./images/11. Use Direct Send via Telegram Setup and ChatIDs.png" alt="Use Direct Send via Telegram Setup and ChatIDs" width="300"/>
+
+### 12. Configure Contact and Direct Send
+<img src="./images/12. Configure Contact and Direct Send.png" alt="Configure Contact and Direct Send" width="300"/>
