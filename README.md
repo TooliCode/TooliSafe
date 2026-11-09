@@ -46,3 +46,29 @@ The code in this repository is published under the **GNU General Public License 
 *TooliSafe is an independent security tool and is not officially affiliated with Telegram or other messenger platforms.*
 
 [📖 View Full Setup & Usage Guide](./INSTALLATION.md)
+
+## 📸 App-Preview (Screenshots)
+
+### 1. Enter PIN-Number
+<img src="./images/1. Enter Pin number.png" alt="Enter PIN-Number" width="300"/>
+
+### 2. Select Contact, enter message
+<img src="./images/2. Select Contact, enter message.png" alt="Select Contact, enter message" width="300"/>
+
+### 3. Send an choose app
+<img src="./images/3. Send an choose app.png" alt="Send an choose app" width="300"/>
+
+### 4. Receive file, attachment and text is shown
+<img src="./images/4. Receive file, attachment and text is shown.png" alt="Receive file, attachment and text is shown" width="300"/>
+
+### 5. Use ZIP mode for local files
+<img src="./images/5. Use ZIP mode for local files.png" alt="Use ZIP mode for local files" width="300"/>
+
+### 6. Open local tsafe file in ZIP mode
+<img src="./images/6. Open local tsafe file in ZIP mode.png" alt="Open local tsafe file in ZIP mode" width="300"/>
+
+### 7. Create a new contact (e.g., Fred) to start the secure Diffie-Hellman key exchange.
+<img src="./images/7. Create a new contact (e.g., Fred) to start the secure Diffie-Hellman key exchange.png" alt="Create a new contact (e.g., Fred) to start the secure Diffie-Hellman key exchange." width="300"/>
+
+### 8. Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app
+<img src="./images/8. Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app.png" alt="Share the generated .tsafe key file securely via WhatsApp, Telegram, or any other app" width="300"/>
